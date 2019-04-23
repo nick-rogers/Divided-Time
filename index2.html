@@ -2,11 +2,248 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Divided Time Mobile</title>
+  <link rel="stylesheet" href="styles/mobile.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
   </head>
   <body>
-  
-  <h1>MOBILE SITE</h1>
-  
+
+
+
+<!-- NAVIGATION ELEMENTS -->
+<div class="nav-wrap">
+    <div class="home-button-div">
+      <a id="h-b" href="index2.html"></a>
+    </div>
+
+    <div class="info-div">
+      <div class="mobile-info"></div>
+    </div>
+ </div>
+
+
+
+
+
+
+
+  <!------- Background Image Video --------->
+  <div id="mobile-back">
+    <div id="back-vid">
+    </div>
+  </div>
+
+
+
+
+
+  <div id="mobile-content">
+
+    <a id="mob-x"></a>
+
+    <div id="loc">
+      <div class="l-mid">
+        <div class="location-im"></div>
+        <div id="location-text">BEIJING, CHINA</div>
+      </div>
+    </div>
+
+    <h1 id="mob-object-title">WATER CLOCK OF KARNAK</h1>
+
+    <h2 id="mob-date">2400 BCE</h2>
+
+    <p id="mob-body">This watch, designed by Nicolas Forfaict (1565-1620), was one of the first that featured a bell and a moon-phase clock. It allowed for increased astrological understanding and measurement in Europe. </p>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+      function updateSlider(slideAmount){
+      var sliderDiv = document.getElementById("vert-range");
+      console.log(slideAmount);
+      $('#count').text(slideAmount);
+      }
+
+      function sliderClick(){
+        console.log('slider click');
+      }
+  </script>
+
+
+
+  <div class="vertical-slider">
+    <input type="range" min="1" max="1000" value="0" id="vert-range" oninput="updateSlider(this.value)">
+  </div>
+
+
+
+
+
+
+
+  <div class="over"></div>
+
+
+
+
+
+  <!-- Progress Scroll Bar --> 
+
+  <button class="prog" id="progID" onclick="void(0)">
+  	<div class="p-bar"></div>
+  </button>
+
+
+
+
+
+
+
+
+<!-- Scroll section -->
+
+  <div class="scroll">
+
+
+
+
+
+<!-------------- MOBILE SECTIONS GO HERE -------->
+  	<div class="mobile-section mobile-section01" id="mobsec01">
+
+        <div class="titles">
+          <h1 class="mob-ob">GNOMON</h1>
+        </div>
+
+        <div class="ds">
+          <h2 class="mob-date">2300 BCE</h2>
+        </div>
+
+    		<div class="mob-image">
+          <!--MOBILE IMAGE-->
+    			<div class="mi" id="mi01">
+            <div class="top-grad"></div>   
+          </div>
+    		</div>
+    		<div class="split split1">
+    			<div class="tri-con tc1">
+    				<div class="tri tri1"></div>
+    			</div>
+    			<div class="fill fill1"></div>
+    			<div class="split-half sh1"></div>
+    		</div>
+    		<div class="split split2">
+    			<div class="fill fill2"></div>
+    			<div class="tri-con">
+    				<div class="tri tri2"></div>
+    			</div>
+    			<div class="split-half sh2"></div>
+    		</div>
+  	</div>
+
+
+
+
+
+    <div class="mobile-section" id="mobsec02">
+
+        <div class="titles">
+          <h1 class="mob-ob">STONEHENGE</h1>
+        </div>
+
+        <div class="ds">
+          <h2 class="mob-date">2000 BCE</h2>
+        </div>
+
+        <div class="mob-image">
+          <!--MOBILE IMAGE-->
+          <div class="mi" id="mi02">
+            <div class="top-grad"></div>
+          </div>
+        </div>
+        <div class="split split1">
+          <div class="tri-con tc1">
+            <div class="tri tri1"></div>
+          </div>
+          <div class="fill fill1"></div>
+          <div class="split-half sh1"></div>
+        </div>
+        <div class="split split2">
+          <div class="fill fill2"></div>
+          <div class="tri-con">
+            <div class="tri tri2"></div>
+          </div>
+          <div class="split-half sh2"></div>
+        </div>
+    </div>
+
+
+
+    <div class="mobile-section" id="mobsec03">
+
+        <div class="titles">
+          <h1 class="mob-ob">STONEHENGE</h1>
+        </div>
+
+        <div class="ds">
+          <h2 class="mob-date">2000 BCE</h2>
+        </div>
+
+        <div class="mob-image">
+          <!--MOBILE IMAGE-->
+          <div class="mi" id="mi03">
+            <div class="top-grad"></div>
+          </div>
+        </div>
+        <div class="split split1">
+          <div class="tri-con tc1">
+            <div class="tri tri1"></div>
+          </div>
+          <div class="fill fill1"></div>
+          <div class="split-half sh1"></div>
+        </div>
+        <div class="split split2">
+          <div class="fill fill2"></div>
+          <div class="tri-con">
+            <div class="tri tri2"></div>
+          </div>
+          <div class="split-half sh2"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="scripts/mobilescripts/rangeslider.min.js" type="text/javascript"></script>
+  <script src="scripts/mobilescripts/script.js" type="text/javascript"></script>
   </body>
 </html>
