@@ -1,10 +1,10 @@
 /* Fonts */
 
-/*
+
 ::-webkit-scrollbar {
   width: 0px;
 }
-*/
+
 
 @font-face {
   font-family: med;
@@ -230,11 +230,13 @@ nav {
 #progress {
 	display: inline-block;
 	width: 600px;
-	height: 12px;
+	height: 40px;
 	transition: ease all 0.4s;
 	cursor: pointer;
-	border-radius: 20px;
 	opacity: 0.3;
+	overflow: hidden;
+	-webkit-clip-path: polygon(2% 0, 98% 0, 100% 50%, 98% 100%, 2% 100%, 0 50%);
+	clip-path: polygon(2% 0, 98% 0, 100% 50%, 98% 100%, 2% 100%, 0 50%);
 }
 
 #progress:hover {
@@ -249,7 +251,6 @@ nav {
 	width: inherit;
 	height: inherit;
 }
-
 
 
 #bar {
@@ -272,7 +273,6 @@ nav {
 	width: 100%;
 	height: inherit;
 	cursor: pointer;
-	border-radius: 12px;
 	z-index: 200;
 }
 
@@ -286,7 +286,6 @@ nav {
 	z-index: 400;
 	right: 0;
 	pointer-events: none;
-	border-radius: 0px 6px 6px 0px;
 }
 
 #marks {
@@ -294,8 +293,7 @@ nav {
 	display: block;
 	width: inherit;
 	height: inherit;
-	background-color: white;
-	border-radius: 12px;
+	background-color: #f1c5fc;
 	z-index: 300;
 	pointer-events: none;
 	cursor: pointer;
@@ -304,18 +302,19 @@ nav {
 .mark {
 	position: absolute;
 	display: block;
-	width: 8px;
-	height: 8px;
-	margin-top: 2px;
+	width: 39px;
+	height: 39px;
 	background-color: #222222;
-	-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	-webkit-clip-path: polygon(50% 0%, 60% 50%, 50% 100%, 40% 50%);
+	clip-path: polygon(50% 0%, 60% 50%, 50% 100%, 40% 50%);
 	cursor: pointer;
 	pointer-events: all;
 	z-index: 300;
 	transition: ease all 0.4s;
 	top: 0;
 	opacity: 0.7;
+	background-size: 100% 100%;
+	background-position: center;
 }
 
 
@@ -324,11 +323,12 @@ nav {
 	display: block;
 	position: absolute;
 	width: 60px;
-	height: 80px;
-	margin-top: -70px;
+	height: 500px;
+	margin-top: 0px;
 	opacity: 0;
 	transition: ease opacity 0.4s;
 }
+
 
 #th {
 	display: block;
@@ -415,8 +415,9 @@ nav {
 	opacity: 1;
 	z-index: 800;
 	opacity: 1;
+	-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
-
 
 
 #mark01 {
@@ -531,9 +532,11 @@ nav {
 #scrub {
 	display: block;
 	position: absolute;
-	width: 2px;
-	height: 40px;
+	width: 10px;
+	height: 100px;
 	background-color: white;
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,0.17690826330532217) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.1825105042016807) 100%);
 	z-index: 1000;
 	margin-top: -13px;
 	pointer-events: none;
@@ -599,9 +602,25 @@ nav {
 	filter: url(../index.html#blur);
 }
 
+.parts {
+	display: block;
+	float: left;
+	height: 100vh;
+	width: 5%;
+	background-image: url(../images/particles.png);
+	background-size: 170% 170%;
+	background-position: center;
+	opacity: 0.10;
+}
+
+
+
+
+
+
 #back {
 	position: fixed;
-	width: 20000px;
+	width: 100vw;
 	height: 100vh;
 	top:0;
 	z-index: 500;
@@ -873,7 +892,7 @@ nav {
 	width: 100px;
 	height: 100px;
 	transition: width 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-	margin-top: 50vh;
+	margin-top: 22vh;
 	pointer-events: none;
 	text-align: center;
 	z-index: 10000;
@@ -897,10 +916,10 @@ nav {
 .thumbnail {
 	display:block;
 	position: absolute;
-	width: 10px;
-	height: 10px;
-	margin-left: 0px;
-	margin-top: 200px;
+	width: 60px;
+	height: 60px;
+	margin-left: -25px;
+	margin-top: 150px;
 	background-color: #222222;
 	-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -910,7 +929,9 @@ nav {
 	background-repeat: no-repeat;
 	pointer-events: none;
 	cursor: pointer;
+	background-size: 130% 130%;
 }
+
 
 #thumbnail01 {
 	background-image: url(../images/im01.png);
@@ -1021,7 +1042,6 @@ nav {
 }
 
 
-
 .big-ob {
 	display:block;
 	position: absolute;
@@ -1037,6 +1057,7 @@ nav {
 	background-size: 100% 100%;
 	background-position: center;
 }
+
 
 
 .text {
@@ -1888,7 +1909,11 @@ canvas {
 
 
 video {
-	display: none !important;
+	/*display: none !important;*/
+}
+
+#back {
+	display: none;
 }
 
 
@@ -1899,24 +1924,6 @@ video {
 
 
 
-
-
-
-
-
-#total-wrap {
-	display: none;
-}
-
-
-
-#mobile-wrap {
-	width: 100%;
-	height: inherit;
-	display: block;
-	margin: 0;
-	margin-right: 0vw;
-}
 
 
 

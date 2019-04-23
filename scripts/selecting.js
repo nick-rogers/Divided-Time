@@ -529,15 +529,12 @@ $('.mark').mouseover(function(){
 	id = id.substring(4,6);
 	id= "url(images/im"+id+".png)";
 
-	$('#th').css('background-image', id);
-
-	$('#pop').css('opacity', '1');
-	$('#pop').css('margin-left', (getScrubPos("#p-can", event)["x"])-31+"px");
+	$(this).css('background-image', id);
 
 
 }).mouseout(function(){
 
-	$('#pop').css('opacity', '0');
+	//$('#pop').css('opacity', '0');
 
 });
 

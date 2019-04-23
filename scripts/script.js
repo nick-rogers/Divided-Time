@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 // Invert Scroll elements
-$.jInvertScroll(['#main', '#back']);
+$.jInvertScroll(['#main']);
 
 
 // Function that takes scrolls and activates division events

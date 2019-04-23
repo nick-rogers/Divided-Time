@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	$("html, body").animate({ scrollTop: "0px" });
+
+
+	$(document).scroll(function(){
+
+		//console.log($(window).scrollTop());
+
+	});
 
 
 
@@ -41,14 +49,21 @@ $('.mark').click(function(){
 
 	dist = parseInt(dist.substring(0, dist.length-2));
 	console.log(dist);
-	dist = ((dist/20000)*200000);
+
+
+	dist = ((dist/20000)*205000);
+
+
 	$("html, body").animate({ scrollTop: (dist)+"px" });
 	setBlur(5);
 	blurry();
 	setTimeout(function(){
 		setBlur(0);
 	}, 400);
+
+	
 });
+
 
 
 
