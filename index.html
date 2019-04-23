@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Divided Time</title>
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+  <link rel="stylesheet" href="styles/mobile.css" type="text/css">
+  <script src="scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="scripts/jquery.jInvertScroll.js" type="text/javascript"></script>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
+
+
+<!-- Mobile redirect script by https://pagecrafter.com -->
+<script type="text/javascript" src="scripts/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
+ SA.redirection_mobile ({
+ mobile_url : "/Divided-Time/index2.html",
+ });
+// ]]></script>
+
+
+
+
+<!-- Mobile redirect script by https://pagecrafter.com -->
+
+<!--
+<script type="text/javascript" src="scripts/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
+ SA.redirection_mobile ({
+ mobile_url : "/Users/nicholasrogers/Desktop/Mobile-Scroll-2/index2.html",
+ });
+// ]]></script>
+-->
+
+
+  </head>
+  <body>
+
+
+
+
+
+
+  <div id="total-wrap">
+  	<!-- Gaussian blur svg --> 
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
+		<defs>
+			<filter id="blur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+			</filter>
+		</defs>
+	</svg>
+
+
+
+
+
+
+
+
+
+
+	<!-- Top and bottom navigation bars -->
+	<nav id="top-nav">
+		<a id="home" href="index.html"></a>
+	</nav>
+	<nav id="bottom-nav">
+		<div id="settings">
+			<a class="setting" id="info"></a>
+			<!--<a class="setting" id="volume"></a>-->
+		</div>
+	</nav>
+
+
+
+
+	<div id="ab">
+		<p>This is a project exploring the history of timekeeping and the devices that have made it possible for humanity to divide time into ever-smaller slices.<br/><br/>Scroll to explore the timeline and click on the object division marks to learn more about them.</p>
+		<a id="xx">X</a>
+	</div>
+
+
+
+
+	<!-- Progress -->
+	<div id="prog">
+		<div id="progress">
+
+			<div class="p-inner">
+				<div id="scrub"></div>
+				<div id="pop">
+					<div id="th"></div>
+					<div id="bl"></div>
+				</div>
+				<div id="cover"></div>
+				<div id="marks">
+					<span class="mark" id="mark01"></span>
+					<span class="mark" id="mark02"></span>
+					<span class="mark" id="mark03"></span>
+					<span class="mark" id="mark04"></span>
+					<span class="mark" id="mark05"></span>
+					<span class="mark" id="mark06"></span>
+					<span class="mark" id="mark07"></span>
+					<span class="mark" id="mark08"></span>
+					<span class="mark" id="mark09"></span>
+					<span class="mark" id="mark10"></span>
+					<span class="mark" id="mark11"></span>
+					<span class="mark" id="mark12"></span>
+					<span class="mark" id="mark13"></span>
+					<span class="mark" id="mark14"></span>
+					<span class="mark" id="mark15"></span>
+					<span class="mark" id="mark16"></span>
+					<span class="mark" id="mark17"></span>
+					<span class="mark" id="mark18"></span>
+					<span class="mark" id="mark19"></span>
+					<span class="mark" id="mark20"></span>
+					<span class="mark" id="mark21"></span>
+					<span class="mark" id="mark22"></span>
+					<span class="mark" id="mark23"></span>
+					<span class="mark" id="mark24"></span>
+					<span class="mark" id="mark25"></span>
+					<span class="mark" id="mark26"></span>
+					<span class="mark" id="mark27"></span>
+				</div>
+				<canvas id="p-can"></canvas>
+			</div>
+
+			<div id="bar"></div>
+
+		</div>
+	</div>
+
+
+
+	<!-- Auto-scroll div -->
+	<div id="anchor"></div>
+
+
+<div id="wrapper">
+	<!-- Date background layer -->
+	<div id="date">
+  		<p class="year">3300 BCE</p>
+  	</div>
+
+
+	<!-- Main body content -->
+	<div id="main">
+
+		<div id="start-scrolling">SCROLL</div>
+
+		<div class="division" id="division01">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm01">
+					
+					<canvas class="select-canvas" id="sc01"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice01">
+							<div class="object-move" id="om01">
+								<div class="text">
+									<div class="t" id="t01">
+										<h2>GNOMON</h2>
+										<p>2300 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail"  id="thumbnail01"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division02">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm02">
+					
+					<canvas class="select-canvas" id="sc02"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice02">
+							<div class="object-move" id="om02">
+								<div class="text">
+									<div class="t" id="t02">
+										<h2>STONEHENGE</h2>
+										<p>2000 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail02"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+
+		<div class="division" id="division03">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm03">
+					
+					<canvas class="select-canvas" id="sc03"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice03">
+							<div class="object-move" id="om03">
+								<div class="text">
+									<div class="t" id="t03">
+										<h2>WATER CLOCK OF KARNAK</h2>
+										<p>1400 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail03"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division04">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm04">
+					
+					<canvas class="select-canvas" id="sc04"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice04">
+							<div class="object-move" id="om04">
+								<div class="text">
+									<div class="t" id="t04">
+										<h2>LUXOR OBELISK</h2>
+										<p>1290 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail04"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division05">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm05">
+					
+					<canvas class="select-canvas" id="sc05"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice05">
+							<div class="object-move" id="om05">
+								<div class="text">
+									<div class="t" id="t05">
+										<h2>WORKMAN'S SUNDIAL</h2>
+										<p>1100 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail05"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division06">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm06">
+					
+					<canvas class="select-canvas" id="sc06"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice06">
+							<div class="object-move" id="om06">
+								<div class="text">
+									<div class="t" id="t06">
+										<h2>PERSIAN WATER CLOCK</h2>
+										<p>500 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail06"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division07">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm07">
+					
+					<canvas class="select-canvas" id="sc07"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice07">
+							<div class="object-move" id="om07">
+								<div class="text">
+									<div class="t" id="t07">
+										<h2>HAN SUNDIAL</h2>
+										<p>150 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail07"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division08">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm08">
+					
+					<canvas class="select-canvas" id="sc08"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice08">
+							<div class="object-move" id="om08">
+								<div class="text">
+									<div class="t" id="t08">
+										<h2>TOWER OF THE WINDS</h2>
+										<p>50 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail08"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division09">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm09">
+					
+					<canvas class="select-canvas" id="sc09"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice09">
+							<div class="object-move" id="om09">
+								<div class="text">
+									<div class="t" id="t09">
+										<h2>SOLARIUM AUGUSTI</h2>
+										<p>10 BCE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail09"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division10">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm10">
+					
+					<canvas class="select-canvas" id="sc10"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice10">
+							<div class="object-move" id="om10">
+								<div class="text">
+									<div class="t" id="t10">
+										<h2>ROMAN SUNDIAL</h2>
+										<p>50 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail10"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+		<div class="division" id="division11">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm11">
+					
+					<canvas class="select-canvas" id="sc11"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice11">
+							<div class="object-move" id="om11">
+								<div class="text">
+									<div class="t" id="t11">
+										<h2>STANDING STONE</h2>
+										<p>650 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail11"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division12">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm12">
+					
+					<canvas class="select-canvas" id="sc12"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice12">
+							<div class="object-move" id="om12">
+								<div class="text">
+									<div class="t" id="t12">
+										<h2>SU SONG'S TOWER</h2>
+										<p>1070 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail12"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division13">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm13">
+					
+					<canvas class="select-canvas" id="sc13"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice13">
+							<div class="object-move" id="om13">
+								<div class="text">
+									<div class="t" id="t13">
+										<h2>INCENSE CLOCK</h2>
+										<p>1110 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail13"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division14">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm14">
+					
+					<canvas class="select-canvas" id="sc14"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice14">
+							<div class="object-move" id="om14">
+								<div class="text">
+									<div class="t" id="t14">
+										<h2>ELEPHANT CLOCK</h2>
+										<p>1200 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail14"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division15">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm15">
+					
+					<canvas class="select-canvas" id="sc15"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice15">
+							<div class="object-move" id="om15">
+								<div class="text">
+									<div class="t" id="t15">
+										<h2>SALISBURY TOWER</h2>
+										<p>1386 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail15"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division16">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm16">
+					
+					<canvas class="select-canvas" id="sc16"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice16">
+							<div class="object-move" id="om16">
+								<div class="text">
+									<div class="t" id="t16">
+										<h2>POMANDER</h2>
+										<p>1530 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail16"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division17">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm17">
+					
+					<canvas class="select-canvas" id="sc17"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice17">
+							<div class="object-move" id="om17">
+								<div class="text">
+									<div class="t" id="t17">
+										<h2>PENDULUM CLOCK</h2>
+										<p>1656 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail17"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division18">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm18">
+					
+					<canvas class="select-canvas" id="sc18"></canvas>
+					<!-- Image div -->
+						<div class="slice" id="slice18">
+							<div class="object-move" id="om18">
+								<div class="text">
+									<div class="t" id="t18">
+										<h2>RAILROAD CHRONOMETER</h2>
+										<p>1850 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail18"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division19">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm19">
+					
+					<canvas class="select-canvas" id="sc19"></canvas>
+						<div class="slice" id="slice19">
+							<div class="object-move" id="om19">
+								<div class="text">
+									<div class="t" id="t19">
+										<h2>QUARTZ CLOCK</h2>
+										<p>1927 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail19"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division20">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm20">
+					
+					<canvas class="select-canvas" id="sc20"></canvas>
+						<div class="slice" id="slice20">
+							<div class="object-move" id="om20">
+								<div class="text">
+									<div class="t" id="t20">
+										<h2>NIST STANDARD</h2>
+										<p>1929 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail20"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division21">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm21">
+					
+					<canvas class="select-canvas" id="sc21"></canvas>
+						<div class="slice" id="slice21">
+							<div class="object-move" id="om21">
+								<div class="text">
+									<div class="t" id="t21">
+										<h2>NIST ATOMIC CLOCK</h2>
+										<p>1949 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail21"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division22">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm22">
+					
+					<canvas class="select-canvas" id="sc22"></canvas>
+
+						<div class="slice" id="slice22">
+							<div class="object-move" id="om22">
+								<div class="text">
+									<div class="t" id="t22">
+										<h2>ASTROCHRON</h2>
+										<p>1967 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail22"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division23">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm23">
+					
+					<canvas class="select-canvas" id="sc23"></canvas>
+
+						<div class="slice" id="slice23">
+							<div class="object-move" id="om23">
+								<div class="text">
+									<div class="t" id="t23">
+										<h2>PULSAR LED WATCH</h2>
+										<p>1973 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail23"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division24">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm24">
+					
+					<canvas class="select-canvas" id="sc24"></canvas>
+
+						<div class="slice" id="slice24">
+							<div class="object-move" id="om24">
+								<div class="text">
+									<div class="t" id="t24">
+										<h2>CASIO F-91W</h2>
+										<p>1991 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail24"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division25">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm25">
+					
+					<canvas class="select-canvas" id="sc25"></canvas>
+
+						<div class="slice" id="slice25">
+							<div class="object-move" id="om25">
+								<div class="text">
+									<div class="t" id="t25">
+										<h2>CHIP ATOMIC CLOCK</h2>
+										<p>2004 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail25"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division26">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm26">
+					
+					<canvas class="select-canvas" id="sc26"></canvas>
+
+						<div class="slice" id="slice26">
+							<div class="object-move" id="om26">
+								<div class="text">
+									<div class="t" id="t26">
+										<h2>STRONTIUM CLOCK</h2>
+										<p>2009 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail26"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+		<div class="division" id="division27">
+			<div class="zone zone-wide"></div>	
+				<div class="zone zone-mid" id="zm27">
+					
+					<canvas class="select-canvas" id="sc27"></canvas>
+
+						<div class="slice" id="slice27">
+							<div class="object-move" id="om27">
+								<div class="text">
+									<div class="t" id="t27">
+										<h2>YTTERBIUM CLOCK</h2>
+										<p>2018 CE</p>
+									</div>
+								</div>
+								<div class="thumbnail" id="thumbnail27"></div>
+							</div>
+						</div>
+
+				</div>
+
+			<div class="zone zone-wide">
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- ENDING SECTION --> 
+	<div id="ending">
+
+		<div class="end-middle">
+			<div id="end-content">
+				<h1>DIVISION TODAY</h1>
+				<p>Every year, increasingly accurate timekeeping devices are created, dividing and measuring our days and lives into tiny, predictable units. We've forgotten the temporal world of the past.</p>
+				<div class="social">
+					<h2>SHARE PROJECT</h2>
+					<div id="icons">
+						<a class="i i1"></a>
+						<a class="i i2"></a>
+						<a class="i i3"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="backing">
+	        <div class="clock">
+	          <div class="center">
+	            <div id="middle"></div>
+	            <div id="middle2"></div>
+	            <div id="middle3"></div>
+	          </div>
+	        </div>
+		</div>
+	</div>
+
+
+
+
+
+<!-- Background layer, contains atmospheric videos --> 
+  	<div id="back">
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="atmospheric">
+			<video class="part-vid" id="v1" width="320" height="240" loop autoplay muted>
+			  <source src="videos/floop.mov" type="video/mp4">
+			</video>
+		</div>
+
+	</div>
+
+
+
+
+
+<!-- Object Pages: Fixed and activated on click -->
+
+<div id="objects" class="one">
+		<div id="object-location">
+			<div id="fil"></div>
+		</div>
+		<div class="ob-in">
+			<!-- Contains the object, part of object foreground-->
+			<div class="trace"></div>
+			<div class="object-con">
+				<div class="main-object">
+					  	<div class="middle">
+					  		<div class="section section1">
+					  			<div id="x"></div>
+					  			<h1 id="title">FULL TITLE HERE</h1>
+					  			<h2 id="era">1566 BCE</h2>
+					  		</div>
+					  		<div class="section section2">
+					  			<div class="mid m1">
+					  				<!-- SECONDARY CONTENT GOES HERE-->
+					  				<div class="secondary">
+					  					<div class="secondary-content">
+					  						<h3 class="secondary-headers sh1">TRANSLATION</h3>
+					  						<div class="secondary-module sm1"></div>
+					  					</div>
+					  				</div>
+					  			</div>
+					  			<div class="mid m2">
+					  			</div>
+					  			<div class="mid m1">
+					  				<!-- SECONDARY CONTENT GOES HERE-->
+					  				<div class="secondary">
+					  					<div class="secondary-content">
+					  						<h3 class="secondary-headers sh2">ORIGIN</h3>
+					  						<div class="secondary-module sm2"></div>
+					  					</div>
+					  				</div>
+					  			</div>
+					  		</div>
+					  		<div class="section section3">
+					  			<div class="bottom b1">
+					  				<p id="desc">This watch, designed by Nicolas Forfaict (1565-1620), was one of the first that featured a bell and a moon-phase clock. It allowed for increased astrological understanding and measurement in Europe.</p>
+					  			</div>
+					  			<div class="bottom b2">
+					  				<div class="scroll-close">
+					  					<!--<div class="swipe"></div>-->
+					  				</div>
+					  			</div>
+					  		</div>
+					  		
+					  	</div>
+				  </div>
+
+
+				  <div class="backing">
+				        <div class="clock">
+				          <div class="center">
+				            <div id="middle"></div>
+				            <div id="middle2"></div>
+				            <div id="middle3"></div>
+				          </div>
+				        </div>
+				  </div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Intro Section -->
+
+
+<!--
+<div id="intro">
+	
+	<div id="intro-logo"></div>
+
+	<p id="loading">LOADING.</p>
+
+	<h1 id="intro-header">Thousands of years ago, timekeeping was invented<br/>
+		<br/>From that moment on, humans have used clocks and calendars to fragment and measure their time at an increasing rate <br/><br/> This project explores the history of timekeeping and the devices that molded our modern perception of time</h1>
+
+	<div id="click-begin"></div>	
+
+	<div id="wipe"></div>
+
+	<div class="backing">
+	    <div class="clock" id="clock-main">
+	      <div class="center">
+	        <div id="middle"></div>
+	        <div id="middle2"></div>
+	        <div id="middle3"></div>
+	      </div>
+	    </div>
+	</div>
+
+</div>
+-->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="mobile-wrap">
+	
+	<!-- NAVIGATION ELEMENTS -->
+	<div class="nav-wrap">
+	    <div class="home-button-div">
+	      <a id="h-b" href="index2.html"></a>
+	    </div>
+
+	    <div class="info-div">
+	      <div class="mobile-info"></div>
+	    </div>
+	 </div>
+
+
+	  <!------- Background Image Video --------->
+	  <div id="mobile-back">
+	    <div id="back-vid">
+	    </div>
+	  </div>
+
+
+	  <div id="mobile-content">
+
+	    <a id="mob-x"></a>
+
+	    <div id="loc">
+	      <div class="l-mid">
+	        <div class="location-im"></div>
+	        <div id="location-text">BEIJING, CHINA</div>
+	      </div>
+	    </div>
+
+	    <h1 id="mob-object-title">WATER CLOCK OF KARNAK</h1>
+
+	    <h2 id="mob-date">2400 BCE</h2>
+
+	    <p id="mob-body">This watch, designed by Nicolas Forfaict (1565-1620), was one of the first that featured a bell and a moon-phase clock. It allowed for increased astrological understanding and measurement in Europe. </p>
+
+	  </div>
+
+
+	  <script>
+	      function updateSlider(slideAmount){
+	      var sliderDiv = document.getElementById("vert-range");
+	      console.log(slideAmount);
+	      $('#count').text(slideAmount);
+	      }
+
+	      function sliderClick(){
+	        console.log('slider click');
+	      }
+	  </script>
+
+
+	  <div class="vertical-slider">
+	    <input type="range" min="1" max="1000" value="0" id="vert-range" oninput="updateSlider(this.value)">
+	  </div>
+
+
+	  <!-- Progress Scroll Bar --> 
+
+	  <button class="prog" id="progID" onclick="void(0)">
+	  	<div class="p-bar"></div>
+	  </button>
+
+
+	<!-- Scroll section -->
+
+	  <div class="scroll">
+
+
+	<!-------------- MOBILE SECTIONS GO HERE -------->
+	  	<div class="mobile-section mobile-section01" id="mobsec01">
+	        <div class="titles">
+	          <h1 class="mob-ob">GNOMON</h1>
+	        </div>
+
+	        <div class="ds">
+	          <h2 class="mob-date">2300 BCE</h2>
+	        </div>
+	    		<div class="mob-image">
+	          <!--MOBILE IMAGE-->
+	    			<div class="mi" id="mi01">
+	            <div class="top-grad"></div>   
+	          </div>
+	    		</div>
+	    		<div class="split split1">
+	    			<div class="tri-con tc1">
+	    				<div class="tri tri1"></div>
+	    			</div>
+	    			<div class="fill fill1"></div>
+	    			<div class="split-half sh1"></div>
+	    		</div>
+	    		<div class="split split2">
+	    			<div class="fill fill2"></div>
+	    			<div class="tri-con">
+	    				<div class="tri tri2"></div>
+	    			</div>
+	    			<div class="split-half sh2"></div>
+	    		</div>
+	  	</div>
+
+	    <div class="mobile-section" id="mobsec02">
+	        <div class="titles">
+	          <h1 class="mob-ob">STONEHENGE</h1>
+	        </div>
+	        <div class="ds">
+	          <h2 class="mob-date">2000 BCE</h2>
+	        </div>
+	        <div class="mob-image">
+	          <!--MOBILE IMAGE-->
+	          <div class="mi" id="mi02">
+	            <div class="top-grad"></div>
+	          </div>
+	        </div>
+	        <div class="split split1">
+	          <div class="tri-con tc1">
+	            <div class="tri tri1"></div>
+	          </div>
+	          <div class="fill fill1"></div>
+	          <div class="split-half sh1"></div>
+	        </div>
+	        <div class="split split2">
+	          <div class="fill fill2"></div>
+	          <div class="tri-con">
+	            <div class="tri tri2"></div>
+	          </div>
+	          <div class="split-half sh2"></div>
+	        </div>
+	    </div>
+
+	    <div class="mobile-section" id="mobsec03">
+	        <div class="titles">
+	          <h1 class="mob-ob">STONEHENGE</h1>
+	        </div>
+	        <div class="ds">
+	          <h2 class="mob-date">2000 BCE</h2>
+	        </div>
+	        <div class="mob-image">
+	          <!--MOBILE IMAGE-->
+	          <div class="mi" id="mi03">
+	            <div class="top-grad"></div>
+	          </div>
+	        </div>
+	        <div class="split split1">
+	          <div class="tri-con tc1">
+	            <div class="tri tri1"></div>
+	          </div>
+	          <div class="fill fill1"></div>
+	          <div class="split-half sh1"></div>
+	        </div>
+	        <div class="split split2">
+	          <div class="fill fill2"></div>
+	          <div class="tri-con">
+	            <div class="tri tri2"></div>
+	          </div>
+	          <div class="split-half sh2"></div>
+	        </div>
+	    </div>
+	  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<script src="scripts/main.js" type="text/javascript"></script>-->
+  <script src="scripts/dat.gui.min.js"></script>
+  <script src="scripts/fluidsolver.js"></script>
+  <!--<script src="scripts/main.js" type="text/javascript"></script>-->
+
+
+
+  <!-- Actual edited script for main site below-->
+  <script src="scripts/tick.js" type="text/javascript"></script>
+  <script src="scripts/script.js" type="text/javascript"></script>
+  <script src="scripts/selecting.js" type="text/javascript"></script>
+  <script src="scripts/intro.js" type="text/javascript"></script>
+  <script src="scripts/hover.js" type="text/javascript"></script>
+  <script src="scripts/progress.js" type="text/javascript"></script>
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

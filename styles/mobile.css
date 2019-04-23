@@ -1,0 +1,827 @@
+@font-face {
+  font-family: med;
+  src: url(../fonts/IBMPlexSerif-Medium.ttf);
+}
+
+@font-face {
+  font-family: boldCondensed;
+  src: url(../fonts/Univers-CondensedBold.otf);
+}
+
+@font-face {
+  font-family: extended;
+  src: url(../fonts/extended.otf);
+}
+
+@font-face {
+  font-family: Programm;
+  src: url(../fonts/DiatypeProgrammFinal.otf);
+}
+
+@font-face {
+  font-family: Univers;
+  src: url(../fonts/Univers.ttf);
+}
+
+
+
+
+
+
+body {
+	margin: 0;
+	background-color: #a464c9;
+	overflow: hidden;
+	/*overflow-y: auto;*/
+	overflow-y: auto;
+}
+
+
+body, html {
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+
+input {
+	background-color: none !important;
+}
+
+
+/*----------------------------- Header ----------------------*/
+
+.nav-wrap {
+	display: block;
+}
+
+
+.home-button-div {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 280px;
+	top: 0;
+	z-index: 10000;
+	text-align: center;
+	pointer-events: none;
+}
+
+#h-b {
+	display: inline-block;
+	width: 450px;
+	height: 220px;
+	margin-top: 40px;
+	background-size: 100% 100%;
+	background-image: url(../images/mobile-home.svg);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+
+
+.info-div {
+	display: block;
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	z-index: 20000;
+	margin-top: 60px;
+	margin-left: 60px;
+}
+
+.mobile-info {
+	display: block;
+	width: inherit;height: inherit;
+	background-image: url(../images/info.svg);
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+
+
+/*----------------------------- Progress Bar ----------------------*/
+
+
+
+.prog {
+	display: block;
+	position: fixed;
+	width: 50px;
+	height: 100vh;
+	background-color: red;
+	z-index: 150000;
+	right: 0;
+	transition: ease all 0.4s;
+	pointer-events: auto;
+	margin: 0;
+	border-width: 0px;
+	border-style: none;
+	padding: 0;
+	display: none;
+}
+
+.p-bar {
+	position: absolute;
+	display: block;
+	width: inherit;
+	position: absolute;
+	height: 0px;
+	background-color: yellow;
+	pointer-events: none;
+	top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.over {
+	display: block;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	pointer-events: none;
+	z-index: 50000;
+	background-image: url(../images/Screen-20.png);
+	background-size: 100% 120%;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------- OBJECT CONTENT ------------------ */
+
+#mobile-content {
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 700000;
+	top: 0;
+	/*
+	background-color: #222222;
+	background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(34,34,34,1) 100%);
+	opacity: 0.85;
+	background-image: url(../images/mob-over.png);
+	background-size: 85% 100%;
+	*/
+	background-position: center;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	display: none;
+	opacity: 0;
+	transition: ease opacity 0.6s;
+}
+
+
+
+#loc {
+	display: block;
+	position: absolute;
+	width: 100vw;
+	height: 100px;
+	margin-top: 70px;
+	text-align: center;
+}
+
+.l-mid {
+	display: inline-block;
+	width: 50vw;
+	height: inherit;
+}
+
+.location-im {
+	display: block;
+	width: 70px;
+	height: 70px;
+	left: 0;
+	float: left;
+	background-image: url(../images/location.svg);
+	background-size: 100% 100%;
+}
+
+
+#location-text {
+	display: block;
+	float: right;
+	width: 40vw;
+	height: inherit;
+	text-align: left;
+	font-family: Univers;
+	font-size: 50px;
+	line-height: 100px;
+	color: #666666;
+}
+
+
+
+
+
+
+#mob-object-title {
+	margin-top: 11vh;
+	display: block;
+	font-family: sans-serif;
+	font-size: 130px;
+	color: #f0f0f0;
+	text-align: center;
+	font-family: boldCondensed;
+	float: left;
+	width: 90vw;
+	margin-left: 5vw;
+}
+
+
+#mob-date {
+	width: 100vw;
+	display: block;
+	font-family: sans-serif;
+	font-size: 70px;
+	color: #f0f0f0;
+	text-align: center;
+	font-family: extended;
+	margin-top: -50px;
+	float: left;
+}
+
+
+
+#mob-x {
+	display: block;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 0;
+	right: 0;
+	margin-right: 12vw;
+	margin-top: 40px;
+	background-image: url(../images/mob-x.svg);
+	background-size: 100% 100%;
+	pointer-events: auto;
+}
+
+
+#mob-body {
+	display: block;
+	position: absolute;
+	width: 80vw;
+	background-color: #222222;
+	margin-left: 10vw;
+	top: 0;
+	margin-top: 57vh;
+	font-family: sans-serif;
+	font-size: 55px;
+	color: white;
+	line-height: 80px;
+	padding-left: 20px;
+	border-style: solid;
+	border-color: #f0f0f0;
+	border-width: 0px 0px 0px 4px;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	background: rgb(34,34,34);
+	background: linear-gradient(180deg, rgba(34,34,34,0.3785889355742297) 0%, rgba(34,34,34,1) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------- Main scroll section ------------------*/
+
+
+
+.scroll {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 50000px;
+	/*background-image: url(../images/Screen-20.png);*/
+	background-size: 100% 100%;
+	z-index: 5000;
+	transition: none;
+}
+
+
+
+
+
+.mobile-section {
+	display: block;
+	position: absolute;
+	width: 100vw;
+	height: 85px;
+	background-color: #222222;
+	margin-top: 1145px;
+	cursor: pointer;
+	/*transition: ease all 0.8s;*/
+	z-index: 60000;
+}
+
+
+
+
+
+
+.ms2 {
+	margin-top: 2400px;
+}
+
+.ms3 {
+	margin-top: 4000px;
+}
+
+
+
+
+
+
+.split {
+	display: block;
+	position: absolute;
+	width: 100vw;
+	float: left;
+	transition: ease height 1.4s, ease margin-top 1.4s;
+	z-index: 70000;
+	pointer-events: none;
+}
+
+
+.split1 {
+	display: block;
+	width: 100vw;
+	height: 175px;
+	margin-top: -175px;
+}
+
+.split2 {
+	display: block;
+	width: 100vw;
+	height: 175px;
+	margin-top: 80px;
+}
+
+.tri-con {
+	position: absolute;
+	display: block;
+	float: left;
+	width: inherit;
+	height: 215px;
+	bottom: 0;
+	text-align: center;
+	pointer-events: none;
+}
+
+.tc1 {
+	top: 0;
+}
+
+.tri {
+	display: inline-block;
+	width: 460px;
+	height: inherit;
+	background-color: #222222;
+}
+
+.tri1 {
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.tri2 {
+	-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.fill {
+	position: absolute;
+	display: block;
+	width: 100vw;
+	background-color: #222222;
+	height: 0%;
+	transition: ease height 0.6s;
+}
+
+.fill1 {
+	bottom: 0;
+}
+
+.fill2 {
+	top: 0;
+}
+
+
+
+
+.mob-image {
+	position: absolute;
+	display: block;
+	width: 100vw;
+	height: 445px;
+	margin-top: -185px;
+	text-align: center;
+	z-index: 80000;
+	pointer-events: none;
+	top: 0;
+	/*transition: ease all 0.8s;*/
+	transition: ease transform 0.5s;
+}
+
+
+
+
+.mi {
+	display: inline-block;
+	width: 440px;
+	height: 440px;
+	background-color: #222222;
+	-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	background-size: 100% 100%;
+	transition: ease height 0.5s, ease width 0.5s;
+	z-index: 400000;
+}
+
+.top-grad {
+	display: block;
+	position: absolute;
+	width: inherit;
+	height: 250px;
+	background: rgb(34,34,34);
+	background: linear-gradient(0deg, rgba(34,34,34,0.10688025210084029) 0%, rgba(34,34,34,1) 100%);
+	top: 0;
+	display: none;
+}
+
+
+
+#mi01 {
+	background-image: url(../images/im01.png);
+}
+#mi02 {
+	background-image: url(../images/im02.png);
+}
+#mi03 {
+	background-image: url(../images/im03.png);
+}
+#mi04 {
+	background-image: url(../images/im04.png);
+}
+#mi05 {
+	background-image: url(../images/im05.png);
+}
+#mi06 {
+	background-image: url(../images/im06.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+#mobsec01 {
+
+}
+
+#mobsec02 {
+	margin-top: 3000px;
+}
+
+#mobsec03 {
+	margin-top: 5000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titles {
+	display: block;
+	position: absolute;
+	width: 100vw;
+	height: 250px;
+	font-family: sans-serif;
+	font-size: 90px;
+	color: #222222;
+	margin-top: -40vw;
+	text-align: center;
+	pointer-events: none;
+}
+
+
+.ds {
+	display: block;
+	position: absolute;
+	width: 100vw;
+	height: 200px;
+	font-family: sans-serif;
+	font-size: 90px;
+	color: #222222;
+	margin-top: 28vw;
+	text-align: center;
+	pointer-events: none;
+}
+
+
+
+.mob-ob, .mob-date {
+	display: inline-block;
+	width: 90vw;
+	margin-top: 0;
+	text-rendering: optimizeLegibility; 
+}
+
+.mob-ob {
+	position: absolute;
+	display: block;
+	width: 100vw;
+	font-size: 115px;
+	font-family: boldCondensed;
+	bottom: 0;
+}
+
+.mob-date {
+	font-size: 100px;
+	font-family: extended;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vertical-slider {
+	display: block;
+	position: fixed;
+	width: 100px;
+	height: 100vh;
+	right: 0;
+	z-index: 500000;
+	opacity: 1;
+	pointer-events: none;
+	display: none;
+}
+
+
+
+#vert-range {
+  position: absolute;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 102vh; /* Full-width */
+  height: 100px; /* Specified height */
+  outline: none; /* Remove outline */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  transform: rotate(90deg);
+  z-index: 500000;
+  margin-left: -49vh;
+  background-color: rgba(243, 229, 255, 0.5);
+  pointer-events: none;
+
+
+
+
+  margin-top: 48vh;
+
+
+
+
+
+
+
+
+
+}
+
+
+#vert-range:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+#vert-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 80px; /* Set a specific slider handle width */
+  height: 80px; /* Slider handle height */
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-style: none;
+  outline: none;
+  transform: rotate(45deg);
+  pointer-events: auto;
+}
+
+
+#vert-range::-moz-range-thumb {
+  width: 80px; /* Set a specific slider handle width */
+  height: 80px; /* Slider handle height */
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-style: none;
+  outline: none;
+  transform: rotate(45deg);
+  pointer-events: auto;
+}
+
+
+
+
+
+
+
+#count {
+	position: fixed;
+	display: block;
+	width: 20px;
+	height: 20px;
+	z-index: 600000;
+	background-color: blue;
+	margin-top: 30vh;
+	margin-left: 400px;
+	font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------- Background video -------------------*/
+
+
+
+#mobile-back {
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: #a464c9;
+	z-index: 3000;
+}
+
+#back-vid {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 3500;
+	background-image: url(../images/part.gif);
+	background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+
