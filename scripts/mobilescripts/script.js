@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 	// Object #6
 
-	var ob06Title = "GNOMON";
+	var ob06Title = "PERSIAN WATER CLOCK";
 	var ob06Year = "500 BCE";
 	var ob06Desc = "The ancient Persian empire used water clocks to measure time. This bowl with perforations in the bottom, allow the owner to pace out a uniform amount of time with only liquid and the bowl. ";
 	

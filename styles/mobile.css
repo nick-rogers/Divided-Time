@@ -778,10 +778,33 @@ input {
 	display: block;
 	position: absolute;
 	width: 100vw;
-	height: 1200px;
+	height: 1300px;
 	background-color: #222222;
 	z-index: 500000;
 	bottom: 0;
+}
+
+#foot-head {
+	display: inline-block;
+	text-align: center;
+	width: 100vw;
+	height: 200px;
+	color: #f0f0f0;
+	font-family: boldCondensed;
+	font-size: 120px;
+}
+
+#footer p {
+	display: inline-block;
+	text-align: left;
+	width: 80vw;
+	height: 500px;
+	color: #f0f0f0;
+	font-family: sans-serif;
+	font-size: 50px;
+	margin-left: 10vw;
+	line-height: 75px;
+	margin-top: -50px;
 }
 
 
@@ -975,15 +998,39 @@ input {
 
 
 
+#s-scroll {
+	display: block;
+	position: absolute;
+	z-index: 700000;
+	width: 60vw;
+	margin-left: 20vw;
+	margin-top: 700px;
+	height: 500px;
+	background-image: url(../images/swipe.svg);
+	background-size: 100% 100%;
+	opacity: 0.4;
+	transform: rotate(180deg);
+	transition: ease all 0.4s;
+	animation-name: swiping;
+	animation-iteration-count: 10;
+	animation-duration: 2s;
+}
 
 
 
 
 
-
-
-
-
+@keyframes swiping {
+	0% {
+		margin-top: 700px;
+	}
+	50% {
+		margin-top: 640px;
+	}
+	100% {
+		margin-top: 700px;
+	}
+}
 
 
 

@@ -2,14 +2,13 @@ $(document).ready(function(){
 
 
 // Loading text in intro 
-
+disableScroll();
 
 var period = 0;
 var loadingText = "";
 var readied = 0;
 var scrollReady = false;
 
-disableScroll();
 
 $('#clock-main').css('opacity', '1');
 

@@ -1678,7 +1678,7 @@ nav {
 
 #click-begin {
 	display: block;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	width: 100px;
 	height: 100px;
@@ -1736,7 +1736,7 @@ nav {
 	background-image: url(../images/swipe.svg);
 	background-size: 100% 100%;
 	opacity: 0.3;
-	animation-name: swiping;
+	/*animation-name: swiping;*/
 	animation-duration: 2s;
 	animation-iteration-count: 999;
 	text-align: center;
@@ -1744,17 +1744,19 @@ nav {
 	color: #f0f0f0;
 	line-height: 230px;
 	z-index: 999000;
+	display: block;
 }
+
 
 @keyframes swiping {
 	0% {
-		margin-top: 500px;
+		margin-top: 100px;
 	}
 	50% {
-		margin-top: 480px;
+		margin-top: 200px;
 	}
 	100% {
-		margin-top: 500px;
+		margin-top: 100px;
 	}
 }
 
@@ -1835,6 +1837,7 @@ nav {
 	width: inherit;
 	height: 100px;
 	margin-top: 20px;
+	display: none;
 }
 
 .social h2 {
@@ -1912,9 +1915,10 @@ video {
 	/*display: none !important;*/
 }
 
+/*
 #back {
 	display: none;
-}
+}*/
 
 
 .dg {
@@ -1922,6 +1926,28 @@ video {
 }
 
 
+
+#restart {
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background-color: white;
+	margin-left: 180px;
+	margin-top: 50px;
+	-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	background-image: url(../images/restart.png);
+	background-size: 50% 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+#restart:hover {
+	opacity: 1;
+}
 
 
 
